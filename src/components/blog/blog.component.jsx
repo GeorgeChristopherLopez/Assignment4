@@ -13,7 +13,7 @@ const Blog = ()=> {
   
   
   
-    console.log(posts)
+    
 
   
     return(
@@ -21,8 +21,16 @@ const Blog = ()=> {
             <div className="blog-posts-container">
             <h2>The Blog</h2>
             {
-              posts.map(({title, body, author, summary})=>
-                <h4>{title}</h4>
+              posts.map(({title, body, author, summary, date})=>
+               <div>
+
+
+              <h4>{title}</h4>
+            
+              <span>{author}</span> | <span>{date}</span>
+              <h6>{summary}</h6>
+                <p>{body}</p>
+                </div>
               )
             }
     

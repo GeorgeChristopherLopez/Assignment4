@@ -26,10 +26,21 @@ const News = () => {
          */
     
     },[])
+    console.log(news)
     return(
         <div className='news-container'>
         {
-          news.map(({title})=> <h6>{title}</h6>)
+          news.map(({title, author, description, content})=> 
+          <div>
+
+
+          <h3>{title}</h3>
+          <p>{author}</p>
+          <h6>{description}</h6>
+          <p>{content}</p>
+          </div>
+          
+          )
         }
 
         </div>
