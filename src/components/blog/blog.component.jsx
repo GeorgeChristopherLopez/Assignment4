@@ -19,17 +19,14 @@ const Blog = ()=> {
     return(
 
             <div className="blog-posts-container">
-            <h2>The Blog</h2>
+            <h1>The Blog</h1>
             {
-              posts.map(({title, body, author, summary, date})=>
-               <div>
-
-
-              <h4>{title}</h4>
-            
-              <span>{author}</span> | <span>{date}</span>
-              <h6>{summary}</h6>
-                <p>{body}</p>
+              posts.map(({id,title, body, author, summary, date})=>
+                <div key={id} className="blog-card">
+                  <h2 className="blog-title">{title}</h2>
+                  <span className="blog-author">{author}</span> | <span className="blog-date">{date}</span>
+                  <h4 className="blog-summary">{summary}</h4>
+                  <p className="blog-body">{body}</p>
                 </div>
               )
             }
