@@ -22,7 +22,6 @@ export default function Navigation() {
         <nav>
 
           <Link to="/">Home</Link> |{" "}
-          <Link to="dashboard">Dashboard</Link> |{" "}
           <Link to="about">About</Link>
        
           <News/>

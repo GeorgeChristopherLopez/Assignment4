@@ -1,10 +1,10 @@
 import React from 'react'
-import { getNewsUrl } from '../services/news.service'
+import { getNewsUrl } from '../../services/news.service'
 const News = () => {
     const [news, setNews] = React.useState([])
     
     const getNews = async () => {
-    
+      
       await fetch(getNewsUrl)
       .then((res)=> res.json().then((data=>{ 
         
@@ -16,9 +16,9 @@ const News = () => {
     }
 
     React.useEffect(()=>{
-        getNews()
+       // getNews()
         // updates every 60 seconds
-        
+        /*
         const interval=setInterval(()=>{
           getNews()
          }, 60000)
@@ -26,8 +26,9 @@ const News = () => {
            
          return()=>clearInterval(interval)
        
-    
+    */
     },[])
+    console.log(news)
     
     return(
         <div className='news-container'>

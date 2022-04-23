@@ -5,10 +5,11 @@ import {
 
 } from "react-router-dom";
 
-import Home from "./routes/home/home.component";
+
 import About from "./routes/about/about.component"
 import Navigation from "./routes/navigation/navigation.component";
-import Dashboard from "./routes/dashboard/dashboard.component";
+import Home from "./routes/home/home.component";
+import Details from "./routes/details/details.component";
 
 export default function App() {
   return (
@@ -17,7 +18,9 @@ export default function App() {
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="dashboard" element={<Dashboard />} />
+      
+        <Route path="details" element={<Details/> } />
+
       </Route>
     </Routes>
   );
