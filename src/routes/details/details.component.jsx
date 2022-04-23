@@ -4,7 +4,7 @@ import Post from "../../components/post/post.component"
 const Details = () => {
     const location = useLocation()
     const {post} = location.state
-    console.log(post)
+   // console.log(post)
     return (
 
         <div>

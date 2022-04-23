@@ -15,7 +15,7 @@ const Home = () => {
         let parser = new DOMParser()
         let xml = parser.parseFromString(data, "application/xml")
         let posts =  xml.getElementsByTagName("post")
-        console.log(posts)
+        //console.log(posts)
         
         for(let i = 0; i < posts.length; i++){
             buildPost(posts[i])
@@ -32,7 +32,7 @@ const Home = () => {
     ,[])
    // console.log(data)
    const buildPost = (x) => {
-       console.log(x)
+       
        let date = x.getElementsByTagName("date")[0].innerHTML
        let author = x.getElementsByTagName("author")[0].innerHTML
        let title = x.getElementsByTagName("title")[0].innerHTML
@@ -51,7 +51,7 @@ const Home = () => {
 
       
    }
-   console.log(data)
+ //  console.log(data)
     return (
         <main>
   
@@ -62,7 +62,7 @@ const Home = () => {
         
         {
             data.map((el)=>{
-                return <PostPreview el={el} />
+                return <PostPreview key={el.title} el={el} />
             })
         }
        

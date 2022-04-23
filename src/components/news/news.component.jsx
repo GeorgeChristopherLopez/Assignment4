@@ -16,9 +16,9 @@ const News = () => {
     }
 
     React.useEffect(()=>{
-       // getNews()
+        getNews()
         // updates every 60 seconds
-        /*
+        
         const interval=setInterval(()=>{
           getNews()
          }, 60000)
@@ -26,9 +26,9 @@ const News = () => {
            
          return()=>clearInterval(interval)
        
-    */
+    
     },[])
-    console.log(news)
+
     
     return(
         <div className='news-container'>

@@ -1,2 +1,1 @@
-export const getNewsUrl = "";   // request url with api key
-
+export const getNewsUrl = "";   // request url with api
